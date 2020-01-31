@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/estilo.css">
+    <link rel="icon" href="/img/k.png">
+    <title>Kory - Producto</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="/javascripts/confirmarBorrar.js"></script>
+</head>
+<body>
+    
+    <%- include("header") %>
+
+
+    <h1 class ="rotulo">Producto</h1>
+
+    <div class = "contenedorGeneral">
+        <div class = "contenedorProductos">
+            
+            <div class = "fotoProducto">
+                <img src = "/producto/imagen/<%=producto.id %>">
+            </div>
+            <div class = "datosProducto">
+                <h2> <%=producto.nombre %></h2>
+
+                <div class = "filaDatos">
+                    <div class = "etiqueta">
+                        <p>Código de referencia: </p>
+                    </div>
+                    <div class = "contenido">
+                        <p><%=producto.referencia %> </p>
+                    </div>
+                </div>
+
+                <div class = "filaDatos">
+                    <div class = "etiqueta">
+                        <p>Marca: </p>
+                    </div>
+                    <div class = "contenido">
+                        <p><%=producto.marca %> </p>
+                    </div>
+                </div>
+
+                <div class = "filaDatos">
+                    <div class = "etiqueta">
+                        <p>Desripción: </p>
+                    </div>
+                    <div class = "contenido">
+                        <p><%=producto.descripcion %> </p>
+                    </div>
+                </div>
+
+                <div class = "filaDatos">
+                    <div class = "etiqueta">
+                        <p>Precio: </p>
+                    </div>
+                    <div class = "contenido">
+                        <h3><%= producto.euros%>.
+                            <%if(producto.centimos < 10){%>0<%}%><%=producto.centimos%> €</h3>
+                    </div>
+                </div>
+
+                <%if(typeof(usuario) != "undefined"){%>
+                <div class = "filaDatos">
+                    <div class = "etiqueta">
+                        <p></p>
+                    </div>
+                    <div class = "contenido">
+                        <a class="botonProducto" href="/producto/modificar/<%=producto.id %>">Modificar</a>
+                        <a class="botonBorrar" id="botonBorrar" href="/producto/borrar/<%=producto.id %>">Borrar</a>
+                    </div>
+                </div>
+                <%}%>
+            </div>
+
+
+           
+
+        </div>
+    </div>
+
+    <%- include("footer") %>
+
+
+</body>
+</html>

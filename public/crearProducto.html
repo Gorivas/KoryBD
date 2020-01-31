@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/estilo.css">
+    <link rel="icon" href="./img/k.png">
+    <title>Kory - Crear Producto</title>
+</head>
+<body>
+    
+
+    <h1 class ="rotulo">Producto:</h1>
+
+    <div class = "contenedorGeneral">
+        <div class = "contenedorProductos">
+            
+            
+            <div class = "datosProducto">
+                <form method="POST" action="crearProducto" enctype="multipart/form-data">
+
+                    <div class = "filaDatos">
+                        <div class = "etiqueta">
+                            <p>Nombre: </p>
+                        </div>
+                        <div class = "contenido">
+                            <input type="text" name="nombre" required >
+                        </div>
+                    </div>
+
+                    <div class = "filaDatos">
+                        <div class = "etiqueta">
+                            <p>Código de referencia: </p>
+                        </div>
+                        <div class = "contenido">
+                            <input type="text" name="referencia" required >
+                        </div>
+                    </div>
+
+                    <div class = "filaDatos">
+                        <div class = "etiqueta">
+                            <p>Marca: </p>
+                        </div>
+                        <div class = "contenido">
+                            <input type="text" name="marca" required >
+                        </div>
+                    </div>
+
+                    <div class = "filaDatos">
+                        <div class = "etiqueta">
+                            <p>Desripción: </p>
+                        </div>
+                        <div class = "contenido">
+                            <input type="text" name="descripción" required >
+                        </div>
+                    </div>
+
+                    <div class = "filaDatos">
+                        <div class = "etiqueta">
+                            <p>Precio: </p>
+                        </div>
+                        <div class = "contenido">
+                            <input type="text" name="euros" required >,
+                            <input type="text" name="céntimos" required > €
+                        </div>
+                    </div>
+
+                    <div class = "filaDatos">
+                        <div class = "etiqueta">
+                            <p>Tipo: </p>
+                        </div>
+                        <div class = "contenido">
+                            <select name = "tipo">
+                                <option>Oferta</option>
+                                <option>Oficina</option>
+                                <option>Escolar</option>
+                                <option>Libros</option>
+                                <option>Temporada</option>
+                                <option>Informática</option>
+                                <option>Lettering</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class = "filaDatos">
+                        <div class = "etiqueta">
+                            <p title="Los artículos no visibles no aparecen al público pero sí están en la base de datos.">Visible: </ptitle="Los artículos destacados aparecen en la página de inicio.">
+                        </div>
+                        <div class = "contenido">
+                            <input title="Los artículos no visibles no aparecen al público pero sí están en la base de datos." type="checkbox" name ="visible" checked class="check">
+                        </div>
+                    </div>
+
+                    <div class = "filaDatos">
+                        <div class = "etiqueta">
+                            <p title="Los artículos destacados aparecen en la página de inicio.">Destacado: </p>
+                        </div>
+                        <div class = "contenido">
+                            <input title="Los artículos destacados aparecen en la página de inicio." type="checkbox" name ="destacado"   class="check">
+                        </div>
+                    </div>
+
+                    <div class = "filaDatos">
+                        <div class = "etiqueta">
+                            <p>Imágen: </p>
+                        </div>
+                        <div class = "contenido">
+                            <input type="file" name="foto" required >
+                        </div>
+                    </div>
+
+                    <div class = "filaDatos">
+                        <div class="crear">
+                            <input type="submit"value="Crear"> 
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+
+           
+
+        </div>
+    </div>
+
+
+</body>
+</html>

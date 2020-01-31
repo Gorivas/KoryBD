@@ -1,0 +1,36 @@
+<header>
+    <div class = "cabecero">
+        <div class = contenedorLogo>
+            <a href="/"><img class ="imagenLogo" src="/img/logo kory.gif"></a>
+        </div>
+        <div class = contenedorTitulo>
+            <div class = titulo>
+                <h1> Kory Papelería
+                    <%if(typeof(usuario) != "undefined"){%>
+                        (Administrador)
+                    <%}%>
+                </h1>
+            </div>
+        </div>
+    </div>
+    <div class = "menu">
+        <a class = "boton" href="/producto/inicio">Inicio </a>
+        <a class = "boton" href="/producto/ofertas">Ofertas </a>
+        <a class = "boton" href="/producto/arte">Arte </a>
+        <a class = "boton" href="/producto/oficina">Oficina </a>
+        <a class = "boton" href="/producto/escolar">Escolar </a>
+        <a class = "boton" href="/producto/libros">Libros </a>
+        <a class = "boton" href="/producto/temporada">Temporada </a>
+        <a class = "boton" href="/producto/informatica">Informática </a>
+        <a class = "boton" href="/producto/lettering">Lettering </a>
+        <a class = "boton" href="/producto/buscar">Buscar </a>
+        <%if(typeof(usuario) != "undefined"){%>
+            <a class = "boton" href="/producto/crear">Crear Producto </a>
+        <%}%>
+        <%if(typeof(usuario) === "undefined"){%>
+        <a class = "botonAdmin" href="/producto/login">Administar </a>
+        <%}else{%>
+            <a class = "botonSalir" href="/producto/logout">Cerrar Sesión </a>
+        <%}%>
+    </div>
+</header>

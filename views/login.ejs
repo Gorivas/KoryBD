@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/estilo.css">
+    <link rel="icon" href="./img/k.png">
+    <title>Kory - Iniciar sesión</title>
+</head>
+<body>
+    
+    <%- include("header") %>
+
+
+    <h1 class ="rotulo">Administrar:</h1>
+
+    <div class = "contenedorGeneral">
+        <div class = "contenedorProductos">
+            
+            
+            <div class = "datosProducto">
+                <form method="POST" action="login">
+
+                    <%if(error){%>
+                    <div class = "filaDatos">
+                        <div class="campoLogin">
+                           <p class = "errorLogin"><%=error%></p>
+                        </div>
+                    </div>
+                    <%}%>
+
+                    <h3>Nombre</h3>
+                    <div class = "filaDatos">
+                        <div class="campoLogin">
+                            <input type="text" name="nombre" class="campoLogin" required >
+                        </div>
+                    </div>
+                    
+                    <h3>Contraseña</h3>
+                    <div class = "filaDatos">
+                        <div class="campoLogin">
+                            <input type="password" name="pass" class="campoLogin" required >
+                        </div>
+                    </div>
+                    
+
+                    
+                    <div class = "filaDatos">
+                        <div class="crear">
+                            <input type="submit"value="Acceder"> 
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+
+           
+
+        </div>
+    </div>
+
+    <%- include("footer") %>
+
+
+</body>
+</html>

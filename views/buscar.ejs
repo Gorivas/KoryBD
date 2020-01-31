@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/estilo.css">
+    <link rel="icon" href="/img/k.png">
+    <title>Kory - Buscar</title>
+</head>
+<body>
+    <%- include("header") %>
+
+
+    <h1 class ="rotulo">Buscar</h1>
+
+    <div class = "contenedorGeneral">
+        <div class = "contenedorProductos">
+            
+            
+            <div class = "datosProducto">
+                <form method="POST" action="buscar">
+
+
+                    <h3></h3>
+                    <div class = "filaDatos">
+                        <div class="campoLogin">
+                            <input type="text" name="texto" class="campoLogin" required >
+                        </div>
+                    </div>
+                    
+                    <div class = "filaDatos">
+                        <div class = "etiqueta">
+                            <p>Buscar por: </p>
+                        </div>
+                        <div class = "contenido">
+                            <select name = "tipo">
+                                <option>Nombre</option>
+                                <option>Referencia</option>
+                                <option>Marca</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+
+                    
+                    <div class = "filaDatos">
+                        <div class="crear">
+                            <input type="submit"value="Buscar"> 
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+
+           
+
+        </div>
+    </div>
+
+    <%- include("footer") %>
+
+
+</body>
+</html>

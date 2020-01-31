@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/estilo.css">
+    <link rel="icon" href="/img/k.png">
+    <title>Kory - Productos</title>
+</head>
+<body>
+    <%- include("header") %>
+
+    <% if(!titulo){%>
+        <h1 class ="rotulo">Productos:</h1>
+    <%}else{%>
+        <h1 class ="rotulo"><%=titulo%></h1>
+    <%}%>
+    <div class = "contenedorGeneral">
+        <%if(error){%>
+            <div class = "filaDatos">
+                <div class="campoLogin">
+                    <p><%=error%></p>
+                </div>
+            </div>
+
+        <%}else{%>
+            <% if(productos.length >0){%>
+                
+            <div class = "contenedorProductos">
+                <% for(let e of productos){%>
+                <div class = "minProducto">
+                    <a href = "/producto/producto/<%= e.id%>">
+                        <p><%= e.nombre%></p>
+                        <img src = "/producto/imagen/<%= e.id%>">
+                        <p><%= e.euros%>.
+                        <%if(e.centimos < 10){%>0<%}%><%=e.centimos%> €</p>
+                    </a>
+                </div>
+                <% } %>
+
+            
+
+            </div>
+            <% }else{%>
+                <div class = "filaDatos">
+                    <div class="campoLogin">
+                        <p>Vaya! Parece que no hay artículos.</p>
+                    </div>
+                </div>
+                
+            <% }%>
+        <%}%>
+    </div>
+
+    <%- include("footer") %>
+
+    
+</body>
+</html>
